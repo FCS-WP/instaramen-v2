@@ -34,3 +34,31 @@ function pr($data)
     die;
 
 }
+
+//function get user points by id user
+function get_user_points_by_id($atts) {
+  if ( is_plugin_active( 'woocommerce-points-and-rewards/woocommerce-points-and-rewards.php' ) ) {
+    global $wpdb;
+    $user_id = intval($atts);
+
+    if ($user_id <= 0) {
+        return 0;
+    }
+
+    $points = $wpdb->get_var($wpdb->prepare("
+        SELECT SUM(points_balance) 
+        FROM fcs_data_wc_points_rewards_user_points 
+        WHERE user_id = %d", 
+        $user_id
+    ));
+
+    if ($points === null) {
+        return 0;
+    }
+
+    return $points;
+    
+  } else {
+    return;
+  }
+}
