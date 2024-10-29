@@ -120,7 +120,7 @@ function exclude_category_from_shop( $query ) {
         $tax_query[] = array(
             'taxonomy' => 'product_cat',
             'field'    => 'id',
-            'terms'    => array( 201 ),
+            'terms'    => array( 18 ),
             'operator' => 'NOT IN',
         );
 
