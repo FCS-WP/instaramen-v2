@@ -143,10 +143,11 @@ function button_membership_on_header(){
         $current_user = wp_get_current_user();
         $user_name = $current_user->display_name;
         ?>
-            <div class="box-name-user">
-                <img src="/wp-content/uploads/2024/10/user.png">
+            <a class="box-name-user" href="/my-account">
+                
+                <i aria-hidden="true" class="far fa-user"></i>
                 <p>Hi, <span><?php echo $user_name; ?></span></p>
-            </div>
+            </a>
         <?php
     }
 }

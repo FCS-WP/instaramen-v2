@@ -212,12 +212,17 @@
   .box-name-user{
     display: flex;
     align-items: center;
-    img{
-        margin-right: 5px;
-        filter: saturate(0) brightness(0) invert(1);
+    i{
+        
+        color: #16539B;
     }
     p{
-        color: #fff;
+        color: #16539B;
+        margin-left: 7px;
         font-weight: bolder;
     }
+  }
+
+  .custom-icon{
+    background-color: #16539B !important;
   }
