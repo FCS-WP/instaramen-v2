@@ -208,3 +208,16 @@
       }
   }
     
+
+  .box-name-user{
+    display: flex;
+    align-items: center;
+    img{
+        margin-right: 5px;
+        filter: saturate(0) brightness(0) invert(1);
+    }
+    p{
+        color: #fff;
+        font-weight: bolder;
+    }
+  }

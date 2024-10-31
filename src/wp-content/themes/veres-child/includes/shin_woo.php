@@ -129,3 +129,25 @@ function exclude_category_from_shop( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'exclude_category_from_shop' );
+
+function button_membership_on_header(){
+    if ( !is_user_logged_in() ){
+        ?>
+            <a href="/my-account" class="custom-icon elementor-button-link elementor-button elementor-btn-align-icon- elementor-size-sm" role="button">
+                <span class="elementor-button-content-wrapper">
+				    <span class="elementor-button-text">SIGN IN</span>
+		        </span>
+            </a>
+        <?php
+    }else{
+        $current_user = wp_get_current_user();
+        $user_name = $current_user->display_name;
+        ?>
+            <div class="box-name-user">
+                <img src="/wp-content/uploads/2024/10/user.png">
+                <p>Hi, <span><?php echo $user_name; ?></span></p>
+            </div>
+        <?php
+    }
+}
+add_shortcode('member_button', 'button_membership_on_header');
