@@ -133,7 +133,7 @@ add_action( 'pre_get_posts', 'exclude_category_from_shop' );
 function button_membership_on_header(){
     if ( !is_user_logged_in() ){
         ?>
-            <a href="#" class="elementor-button-link elementor-button elementor-btn-align-icon- elementor-size-sm" role="button">
+            <a href="/my-account" class="custom-icon elementor-button-link elementor-button elementor-btn-align-icon- elementor-size-sm" role="button">
                 <span class="elementor-button-content-wrapper">
 				    <span class="elementor-button-text">SIGN IN</span>
 		        </span>
