@@ -95,12 +95,13 @@ function join_membership_after_register_form() {
     if ( !is_user_logged_in() ) {
     ?>
     <div class="message-join-membership">
-    <h2>Member benefits</h2>
+    <h3>Member benefits</h3>
     <ul>
         <li>Get Free $<?php echo $signup_points; ?></li>
         <li>Earn points when making purchases</li>
         <li>Use points to make purchases</li>
     </ul>
+    </div>
     <?php
     }
 }
