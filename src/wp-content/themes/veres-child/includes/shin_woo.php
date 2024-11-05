@@ -191,7 +191,7 @@ function display_product_video_on_single_product() {
     <div data-thumb="<?php echo THEME_URL . '-child/assets/icons/thumb-video.png'; ?>" data-thumb-alt="" class="woocommerce-product-gallery__image product-video" style="width: 496px; margin-right: 0px; float: left; display: block;">
       <?php if (!empty($video_url)) : ?>
         <a data-elementor-open-lightbox="no">
-          <video width="100%" height="100%" controls="false" loop="true" autoplay="true">
+          <video width="100%" height="100%" controls="false" loop="true" autoplay="false">
             <source src="<?php echo $video_url; ?>" type="video/mp4">
           </video>
         </a>
